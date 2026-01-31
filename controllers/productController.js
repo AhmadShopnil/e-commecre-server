@@ -39,6 +39,8 @@ export const getProducts = async (req, res) => {
             .sort({ createdAt: -1 })
             .toArray();
 
+        console.log("fetching porducts", products)
+
         res.json(products);
     } catch (error) {
         console.error("GET /api/products error:", error);
